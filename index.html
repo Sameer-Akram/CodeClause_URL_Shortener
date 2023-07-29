@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Shortener</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="jumbotron text-center">
+      <h1 class="display-4">URL Shortener</h1>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="long-url">Enter or Paste Your long URL:</label>
+            <input type="text" class="form-control" id="long-url" name="long-url" placeholder="Enter your long URL">
+            <!-- Add a new element to show the error message -->
+            <small class="text-danger d-none" id="url-error">Please enter a valid URL</small>
+          </div>
+          <button type="button" class="btn btn-primary btn-block" id="shorten-btn">Shorten</button>
+          <div class="mt-2 text-center" id="loading" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </form>
+        <div id="short-url-container" class="mt-4" style="display:none;">
+          <p>Here's your shortened URL:</p>
+          <div id="short-url" class="d-flex align-items-center">
+            <a href="" target="_blank" class="text-break mr-2" id="short-url-link"></a>
+            <button type="button" class="btn btn-outline-primary btn-sm" id="copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <h3>History</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Original URL</th>
+            <th>Shortened URL</th>
+            <th>Date</th>
+            <th>Days Ago</th>
+          </tr>
+        </thead>
+        <tbody id="history-list"></tbody>
+      </table>
+      <button type="button" class="btn btn-danger" id="clear-history-btn">Clear History</button>
+    </div>
+    <div class="text-center mt-4">
+      <p class="credit">Made with <span style="color:tomato;font-size:20px;">❤ </span>by Sameer</p>
+    </div>
+  </div>
+
+  <!-- Include Bootstrap JS and your custom script.js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f0f0f0;
+  }
+  
+  .container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .jumbotron {
+    background: linear-gradient(to right, #8f94fb, #4e54c8);
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid #8f94fb;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary {
+    background-color: #4e54c8;
+    border-color: #4e54c8;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #364dc8;
+    border-color: #364dc8;
+  }
+  
+  #short-url-container {
+    margin-top: 20px;
+  }
+  
+  #short-url-container.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #short-url-container p {
+    color: #555;
+  }
+  
+  #short-url a {
+    color: #4e54c8;
+  }
+  
+  #copy-btn {
+    margin-top: 10px;
+    transition: background-color 0.2s;
+  }
+  
+  #copy-btn:hover {
+    background-color: #2b2ca2;
+  }
+  
+  .credit a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 800;
+  }
+  
+  .credit {
+    text-align: center;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  #loading {
+    margin-top: 20px;
+  }
+  
+  /* Error message style */
+  .text-danger {
+    font-size: 12px;
+    font-weight: bold;
+    color: #ff4d4d;
+    display: none;
+  }
+  
+  .text-danger.show {
+    display: block;
+    animation: fade-in-out 2s ease-in-out;
+  }
+  
+  /* History section styles */
+  .text-center {
+    margin-top: 30px;
+  }
+  
+  h3 {
+    color: #4e54c8;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  #history-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #history-list li {
+    margin-bottom: 8px;
+  }
+  
+  .btn-danger {
+    background-color: #ff4d4d;
+    border-color: #ff4d4d;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .btn-danger:hover {
+    background-color: #e63939;
+    border-color: #e63939;
+  }
+   /* History section styles */
+   .text-center {
+    margin-top: 30px;
+  }
+  
+  h3 {
+    color: #4e54c8;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  /* Table styles */
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    text-align: center;
+  }
+
+  th {
+    color: #4e54c8;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  td {
+    font-size: 14px;
+  }
+
+  /* Copy button styles */
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4e54c8;
+    border: 1px solid #4e54c8;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+
+  .copy-btn:hover {
+    background-color: #364dc8;
+    border-color: #364dc8;
+  }
+  /* Your existing CSS styles remain the same */
+
+/* Animation for "Cleared!" and "Copied!" messages */
+@keyframes fade-in-out-copy {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .copy-message {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    animation: fade-in-out-copy 1s forwards;
+  }
+  
